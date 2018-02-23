@@ -95,7 +95,7 @@
 ```
 ![pict](http://p3.pstatp.com/large/46f90003ec8d66b77e36)
 - 接下来绘制眼睛和豆豆，这就很简单了，眼睛可以利用定位，豆豆我们为其使结构更简单，可以利用伪类
-```
+```css
 .eat-man {
 position: relative;
 margin:50px auto 0;
@@ -106,8 +106,8 @@ border-right-color:transparent;
 -webkit-border-radius: 60px;
 -moz-border-radius: 60px;
 border-radius: 60px;} 
-//eye.eat-man 
-.eye {
+/*eye*/
+.eat-man .eye {
 position: absolute;
 top:-50px;
 left:0px;
@@ -116,8 +116,8 @@ height: 15px;
 background: #fff;
 border-radius: 50%;
 } 
-//豆豆.eat-man 
-.food:before {
+/*豆豆*/
+.eat-man .food:before {
 position: absolute;
 top:-5px;
 left:50px;
@@ -139,6 +139,6 @@ height: 15px;
 background: #fff670;
 border-radius: 50%;
 }
-
 <div class="eat-man"> <p class="eye"></p> <p class="food"></p> </div>
 ```
+![pict](http://p3.pstatp.com/large/46fd000395a2b66063a4)
