@@ -80,3 +80,65 @@
 ![pict](http://p1.pstatp.com/large/46fb0003b0434af6b8ad)
 - 此时，将颜色设置为一样，视觉效果就截然不同了
 ![pict](http://p3.pstatp.com/large/46fe0001e3c658284651)
+#### 吃豆豆
+- 原理：利用border-radius和三角形原理，绘制上，下，左，右四个三角形，将右边的颜色设为透明
+```css
+.eat-man {
+  width: 0px;
+  height: 0px;
+  border:60px solid #e8ff84;
+  border-right-color:transparent;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+}
+```
+![pict](http://p3.pstatp.com/large/46f90003ec8d66b77e36)
+- 接下来绘制眼睛和豆豆，这就很简单了，眼睛可以利用定位，豆豆我们为其使结构更简单，可以利用伪类
+```
+.eat-man {
+position: relative;
+margin:50px auto 0;
+width: 0px;
+height: 0px;
+border:60px solid #e8ff84;
+border-right-color:transparent;
+-webkit-border-radius: 60px;
+-moz-border-radius: 60px;
+border-radius: 60px;} 
+//eye.eat-man 
+.eye {
+position: absolute;
+top:-50px;
+left:0px;
+width: 15px;
+height: 15px;
+background: #fff;
+border-radius: 50%;
+} 
+//豆豆.eat-man 
+.food:before {
+position: absolute;
+top:-5px;
+left:50px;
+content: '';
+display: block;
+width: 15px;
+height: 15px;
+background: #fff670;
+border-radius: 50%;
+}
+.eat-man .food:after {
+position: absolute;
+top:-5px;
+left:80px;
+content: '';
+display: block;
+width: 15px;
+height: 15px;
+background: #fff670;
+border-radius: 50%;
+}
+
+<div class="eat-man"> <p class="eye"></p> <p class="food"></p> </div>
+```
