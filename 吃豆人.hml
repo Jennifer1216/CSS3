@@ -1,55 +1,56 @@
-//css
-.eat-man {
-  width: 0px;
-  height: 0px;
-  border:60px solid #e8ff84;
-  border-right-color:transparent;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  border-radius: 60px;
-}
-.eat-man {
-position: relative;
-margin:50px auto 0;
-width: 0px;
-height: 0px;
-border:60px solid #e8ff84;
-border-right-color:transparent;
--webkit-border-radius: 60px;
--moz-border-radius: 60px;
-border-radius: 60px;} 
-/*eye*/
-.eat-man .eye {
-position: absolute;
-top:-50px;
-left:0px;
-width: 15px;
-height: 15px;
-background: #fff;
-border-radius: 50%;
-} 
-/*豆豆*/
-.eat-man .food:before {
-position: absolute;
-top:-5px;
-left:50px;
-content: '';
-display: block;
-width: 15px;
-height: 15px;
-background: #fff670;
-border-radius: 50%;
-}
-.eat-man .food:after {
-position: absolute;
-top:-5px;
-left:80px;
-content: '';
-display: block;
-width: 15px;
-height: 15px;
-background: #fff670;
-border-radius: 50%;
-}
-//html
-<div class="eat-man"><p class="eye"></p> <p class="food"></p></div>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css3绘制图形-吃豆人<title>
+    <style>
+			#star {
+				margin: 50px auto 0;
+				position: relative;
+				display: block;
+				width: 0;
+				height: 0;
+				border-right: 70px solid transparent;
+				border-left: 70px solid transparent;
+				border-bottom: 40px solid #c889ff;
+			}
+			#star:before {
+				position: absolute; 
+				top:0; 
+				left:-74px; 
+				content: ''; 
+				display: block; 
+				width: 0; 
+				height: 0; 
+				border-right: 70px solid transparent; 
+				border-left: 70px solid transparent;
+				border-bottom: 40px solid #c889ff; 
+				-webkit-transform: rotate(72deg); 
+				-moz-transform: rotate(72deg); 
+				-ms-transform: rotate(72deg); 
+				-o-transform: rotate(72deg); 
+				transform: rotate(72deg);
+			}
+			#star:after { 
+				position: absolute; 
+				top:0; 
+				left:-70px; 
+				content: ''; 
+				display: block; 
+				width: 0; 
+				height: 0; 
+				border-right: 70px solid transparent; 
+				border-left: 70px solid transparent; 
+				border-bottom: 40px solid #ffb065; 
+				-webkit-transform: rotate(-72deg); 
+				-moz-transform: rotate(-72deg); 
+				-ms-transform: rotate(-72deg); 
+				-o-transform: rotate(-72deg); 
+				transform: rotate(-72deg);
+			}
+    </style>
+  </head>
+  <body>
+    <div class="eat-man"><p class="eye"></p> <p class="food"></p></div>
+  </body>
+</html>
